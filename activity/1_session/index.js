@@ -13,6 +13,14 @@ for (let i = 1; i <= 100; i++) {
 }
 
 // Ejercicio 4
+console.log("Ejercicio 4");
+for(var i = 0; i < 101; i++) {
+    if (i % 7 === 0) {
+        console.log(i);
+    }
+}
+console.log(i);
+
 
 // Ejercicio 5
 
