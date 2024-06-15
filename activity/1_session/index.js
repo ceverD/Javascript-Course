@@ -25,4 +25,21 @@ console.log(i);
 // Ejercicio 5
 
 // Ejercicio 6
+class Formatter {
+    constructor() {
+        this.prefix = "Hello ";
+    }
+
+    append(text) {
+        console.log(this.prefix + text);
+    }
+
+    toLowerString(text) {
+        console.log(text.toLowerCase());
+    }
+}
+
+const formatter = new Formatter();
+formatter.append("World"); // Result: Hello World
+formatter.toLowerString("I'm Lucas"); // Result: i'm lucas
 
