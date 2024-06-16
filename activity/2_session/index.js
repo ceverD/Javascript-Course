@@ -56,6 +56,33 @@ const myCat = new Cat("Miau", "¡Miau!");
 myCat.makeSound(); // ¡Miau!
 
 // Ejercicio 3
+class InvertirCadena {
+  constructor() {
+    this.cadenaInvertir = "";
+  }
+
+  invertirTexto() {
+    if (this.cadenaInvertir === "") {
+      throw new Error("La cadena está vacía. No se puede invertir.");
+    }
+
+    const textoInvertido = this.cadenaInvertir.split("").reverse().join("");
+    console.log(textoInvertido);
+  }
+
+  nuevoMetodo() {
+    const textoInvertido = this.cadenaInvertir === "" ? this.cadenaInvertir : this.cadenaInvertir.split("").reverse().join("");
+    console.log(textoInvertido);
+  }
+}
+
+const invertirCadena = new InvertirCadena();
+invertirCadena.cadenaInvertir = "Hola mundo";
+invertirCadena.invertirTexto(); // "odnum aloH"
+invertirCadena.nuevoMetodo(); // "odnum aloH"
+invertirCadena.cadenaInvertir = "";
+//invertirCadena.invertirTexto(); // error
+invertirCadena.nuevoMetodo(); // ""
 
 // Ejercicio 4
 
