@@ -107,8 +107,8 @@ let logbad = new Login("pepe", "bad"); // alert -> User or passwd incorrect
 // Ejercicio 5
 const btnLoginSuccess = document.getElementById("loginSuccess");
 const btnLoginFailure = document.getElementById("loginFailure");
-btnLoginSuccess.addEventListener("click", (event) => new Login("admin", "passwd"));
-btnLoginFailure.addEventListener("click", (event) => new Login("pepe", "bad"));
+btnLoginSuccess.addEventListener("click", () => new Login("admin", "passwd"));
+btnLoginFailure.addEventListener("click", () => new Login("pepe", "bad"));
 
 // Ejercicio 6
 
