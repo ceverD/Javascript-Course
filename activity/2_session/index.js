@@ -85,6 +85,24 @@ invertirCadena.cadenaInvertir = "";
 invertirCadena.nuevoMetodo(); // ""
 
 // Ejercicio 4
+class Login {
+  constructor(username, password) {
+    this.username = username;
+    this.password = password;
+    this.login();
+  }
+
+  login() {
+    if (this.username === "admin" && this.password === "passwd") {
+      alert("User logged in");
+    } else {
+      alert("User or passwd incorrect");
+    }
+  }
+}
+
+let login = new Login("admin", "passwd"); // alert -> User logged in
+let logbad = new Login("pepe", "bad"); // alert -> User or passwd incorrect
 
 // Ejercicio 5
 
