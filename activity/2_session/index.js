@@ -112,7 +112,7 @@ btnLoginFailure.addEventListener("click", () => new Login("pepe", "bad"));
 
 // Ejercicio 6
 
-let loginWitUsername = (username, password) => {
+let loginWithUsername = (username, password) => {
     return new Promise(function (resolve, rejected) {
       setTimeout(() => {
         if (username === "admin" && password === "passwd") {
@@ -123,3 +123,17 @@ let loginWitUsername = (username, password) => {
       }, 200);
     });
 };
+
+async function handleLogin(username, password) {
+  try {
+    const result = await loginWithUsername(username, password)
+    alert(result);
+  } catch (error) {
+    alert(error);
+  }
+}
+
+const btnLoginSuccessAsync = document.getElementById("loginSuccessAsync");
+const btnLoginFailureAsync = document.getElementById("loginFailureAsync");
+btnLoginSuccessAsync.addEventListener("click", async () => handleLogin("admin", "passwd"));
+btnLoginFailureAsync.addEventListener("click", async () => handleLogin("pepe", "bad"));
