@@ -33,13 +33,14 @@ class Formatter {
     append(text) {
         console.log(this.prefix + text);
     }
-
-    toLowerString(text) {
-        console.log(text.toLowerCase());
-    }
 }
 
 const formatter = new Formatter();
 formatter.append("World"); // Result: Hello World
+
+Formatter.prototype.toLowerString = function(text) {
+    console.log(text.toLowerCase());
+};
+
 formatter.toLowerString("I'm Lucas"); // Result: i'm lucas
 
