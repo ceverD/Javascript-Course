@@ -27,4 +27,37 @@ console.log(sumOrConcatenate(4, "hello")); // --> 4:hello
 console.log(sumOrConcatenate("hello", "world")); // --> hello-world
 
 // Ejercicio 3
+function startVehicle(vehicle) {
+    vehicle.turnOnEngine();
+    if (isCar(vehicle)) {
+        vehicle.pressPedal();
+    }
+    else {
+        vehicle.openThrottle();
+    }
+}
+function isCar(vehicle) {
+    return vehicle.pressPedal !== undefined;
+}
+var myCar = {
+    tires: 4,
+    turnOnEngine: function () {
+        console.log('Car engine started.');
+    },
+    pressPedal: function () {
+        console.log('Car pedal pressed.');
+    }
+};
+var myMotorcycle = {
+    tires: 2,
+    turnOnEngine: function () {
+        console.log('Motorcycle engine started.');
+    },
+    openThrottle: function () {
+        console.log('Motorcycle throttle opened.');
+    }
+};
+startVehicle(myCar);
+startVehicle(myMotorcycle);
+
 // Ejercicio 4

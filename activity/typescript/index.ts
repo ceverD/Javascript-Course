@@ -35,5 +35,53 @@ console.log(sumOrConcatenate("hello", "world")); // --> hello-world
 
 
 // Ejercicio 3
+interface Car {
+    tires: number;
+    turnOnEngine(): void;
+    pressPedal(): void;
+}
+
+interface Motorcycle {
+    tires: number;
+    turnOnEngine(): void;
+    openThrottle(): void;
+}
+
+function startVehicle(vehicle: Car | Motorcycle) {
+    vehicle.turnOnEngine();
+    if (isCar(vehicle)) {
+        vehicle.pressPedal();
+    } else {
+        vehicle.openThrottle();
+    }
+}
+
+function isCar(vehicle: Car | Motorcycle): vehicle is Car {
+    return (vehicle as Car).pressPedal !== undefined;
+}
+
+const myCar: Car = {
+    tires: 4,
+    turnOnEngine() {
+        console.log('Car engine started.');
+    },
+    pressPedal() {
+        console.log('Car pedal pressed.');
+    }
+};
+
+const myMotorcycle: Motorcycle = {
+    tires: 2,
+    turnOnEngine() {
+        console.log('Motorcycle engine started.');
+    },
+    openThrottle() {
+        console.log('Motorcycle throttle opened.');
+    }
+};
+
+startVehicle(myCar);
+startVehicle(myMotorcycle);
+
 
 // Ejercicio 4
