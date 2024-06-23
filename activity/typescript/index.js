@@ -9,7 +9,6 @@ var lucas = {
 };
 var result = personToArray(lucas);
 console.log(result); // ["Lucas", 28, "Full Stack"]
-
 // Ejercicio 2
 function sumOrConcatenate(a, b) {
     if (typeof a === 'number' && typeof b === 'number') {
@@ -61,3 +60,20 @@ startVehicle(myCar);
 startVehicle(myMotorcycle);
 
 // Ejercicio 4
+function removeFirstEntry(arr) {
+    return arr.slice(1);
+}
+
+var strArray = ['Hello', 'World', 'Im', 'a', 'Full', 'Stack', 'Developer'];
+var numArray = [1, 2, 3, 4, 5, 6, 7];
+var mixedArray = ['Hello', 'I', 'have', 3, 'tasks'];
+var unsupportedArray = [{ name: 'Lucas', surname: 'Fernandez' }, 'Hello', 22];
+
+var newStrArray = removeFirstEntry(strArray);
+var newNumArray = removeFirstEntry(numArray);
+var newMixedArray = removeFirstEntry(mixedArray);
+// const newUnsupportedArray = removeFirstEntry(unsupportedArray); --> will fail
+
+console.log(newStrArray); // --> ['World', 'Im', 'a', 'Full', 'Stack', 'Developer'];
+console.log(newNumArray); // --> [2, 3, 4, 5, 6, 7];
+console.log(newMixedArray); // --> ['I', 'have', 3, 'tasks'];
